@@ -1,0 +1,16 @@
+import pandas as pd
+
+# Create sample music_features.csv
+data = {
+    "filename": ["song1.wav", "song2.wav", "song3.wav", "song4.wav"],
+    "tempo": [120, 80, 95, 140],
+    "energy": [0.75, 0.40, 0.55, 0.85],
+    "pitch": [2500, 1500, 1800, 3000],
+    "mood": ["Happy", "Sad", "Calm", "Energetic"]
+}
+
+df = pd.DataFrame(data)
+df.to_csv("music_features.csv", index=False)
+
+print("CSV created successfully!")
+df.head()
